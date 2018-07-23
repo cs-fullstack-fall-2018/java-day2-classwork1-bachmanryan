@@ -3,16 +3,17 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        String names1 = "very awesome";
-        String names2 = "";
-        Scanner consoleInput = new Scanner(System.in);
 
-        System.out.println("How awesome is Kenn and Kevin");
-        names2 = consoleInput.nextLine();
+        Scanner userInput = new Scanner(System.in);
 
-        while (! names2.equals(names1)){
-            System.out.println("Nope");
-            names1 = consoleInput.nextLine();
+        System.out.println("How awesome are Kenn and Kevin");
+        String quit = userInput.nextLine();
+
+        System.out.println(quit);
+        while (! quit.equals("very awesome")){
+            System.out.println("How awesome are Kenn and Kevin");
+            System.out.println(quit.equals("very awesome"));
+            quit = userInput.nextLine();
         }
     }
 }
